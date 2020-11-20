@@ -1,0 +1,99 @@
+/* GENERALI */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(to bottom,
+        #009688 0px,
+        #009688 15vh,
+        #dddbd1 15vh,
+        #d2dbdc 100%);
+}
+
+.root {
+    height: 100vh;
+    width: 100vw;
+}
+
+.debug {
+    border: 1px solid white;
+}
+
+/* CONTAINER CENTRALE */
+.main-container {
+    width: 85vw;
+    height: 90vh;
+    margin: 0 auto;
+}
+
+.main-container::after {
+    display: table;
+    clear: both;
+    content: "";
+}
+
+.right-container {
+    float: left;
+    width: 60%;
+    height: 100%;
+}
+
+.root.flex {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+/* LEFT CONTAINER */
+.left-container {
+    float: left;
+    width: 40%;
+    height: 100%;
+}
+
+.left-header-user {
+    height: 70px;
+    background-color: #eaeaea;
+}
+
+.left-header-notify {
+    height: 80px;
+    background-color: #8edafc;
+}
+
+.left-search-bar {
+    height: 50px;
+    background-color: #fafafa;
+}
+
+.left-users-list {
+    background-color: #ffffff;
+    height: calc(100% - 70px - 80px - 50px);
+}
+
+
+/* RIGHT CONTAINER */
+.right-container {
+    float: left;
+    width: 60%;
+    height: 100%;
+}
+
+.right-header-user {
+    height: 70px;
+    background-color: #eaeaea;
+}
+
+.right-messages-list {
+    background-image: url("../img/mine.jpg");
+    height: calc(100% - 70px - 70px);
+}
+
+.right-input-message {
+    height: 70px;
+    background-color: #f3eeea;
+}
