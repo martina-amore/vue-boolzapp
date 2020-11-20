@@ -15,8 +15,8 @@
                 <div class="left-container debug">
                     <div class="left-header-user flex">
                         <div class="my-username flex">
-                            <img src="img/avatar_io.jpg" alt="Mio avatar">
-                            <h4>Nome Utente</h4>
+                            <img :src="myUsername.image" alt="Mio avatar">
+                            <h4>{{myUsername.name}}</h4>
                         </div>
                         <div class="left-header-icons">
                             <i class="fas fa-circle-notch"></i>
@@ -38,7 +38,12 @@
                         <input type="text" class="search-user" name="" value="" placeholder="Cerca o inizia una nuova chat">
                     </div>
                     <div class="left-users-list">
-
+                        <ul class="users-list">
+                            <li class="flex" v-for="element in userList">
+                                <img :src="element.image" alt="Immagine utente">
+                                <h4>{{element.name}}</h4>
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <div class="right-container debug">

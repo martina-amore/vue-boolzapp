@@ -19,9 +19,9 @@ body {
     width: 100vw;
 }
 
-.debug {
+/* .debug {
     border: 1px solid white;
-}
+} */
 
 /* CONTAINER CENTRALE */
 .main-container {
@@ -90,7 +90,7 @@ body {
 .left-header-notify {
     height: 80px;
     background-color: #8edafc;
-    padding-left: 10px;
+    padding-left: 15px;
     padding-right: 5px;
 }
 
@@ -134,12 +134,13 @@ body {
 }
 
 .left-search-bar .search-user {
-    width: 95%;
+    width: 100%;
     height: 70%;
     border-radius: 3px;
     border: 1px solid #f5f5f5;
     position: relative;
     padding-left: 60px;
+    outline: none;
 }
 
 .left-search-bar .search-user::placeholder {
@@ -158,6 +159,26 @@ body {
     background-color: #ffffff;
     height: calc(100% - 70px - 80px - 50px);
 }
+
+.users-list li.flex {
+    display: flex;
+}
+
+.left-users-list li {
+    list-style-type: none;
+    border-bottom: 1px solid #f5f5f5;
+    padding: 8px 15px;
+}
+
+.left-users-list img {
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+
+
+
 
 
 /* RIGHT CONTAINER */
