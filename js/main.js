@@ -31,22 +31,22 @@ const root = new Vue ({
         {
             image: "img/avatar_1.jpg",
             name: "Michele",
-            lastAccess: "Ultimo accesso alle"
+            lastAccess: "Ultimo accesso oggi alle"
         },
         {
             image: "img/avatar_2.jpg",
             name: "Fabio",
-            lastAccess: "Ultimo accesso alle"
+            lastAccess: "Ultimo accesso oggi alle"
         },
         {
             image: "img/avatar_3.jpg",
             name: "Samuele",
-            lastAccess: "Ultimo accesso alle"
+            lastAccess: "Ultimo accesso oggi alle"
         },
         {
             image: "img/avatar_4.jpg",
             name: "Alessio",
-            lastAccess: "Ultimo accesso alle"
+            lastAccess: "Ultimo accesso oggi alle"
         }
     ]
     },

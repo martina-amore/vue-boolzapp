@@ -46,14 +46,29 @@
                         </ul>
                     </div>
                 </div>
-                <div class="right-container debug">
-                    <div class="right-header-user">
-
+                <div class="right-container debug flex">
+                    <div class="right-header-user flex">
+                        <div class="username flex">
+                            <img :src="userList[0].image" alt="Immagine del profilo">
+                            <div class="name-last-access">
+                                <h4>{{userList[0].name}}</h4>
+                                <h5>{{userList[0].lastAccess}}</h5>
+                            </div>
+                        </div>
+                        <div class="right-header-icons">
+                            <i class="fas fa-search"></i>
+                            <i class="fas fa-paperclip"></i>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
                     </div>
                     <div class="right-messages-list">
 
                     </div>
-                    <div class="right-input-message">
+                    <div class="right-input-message flex">
+                        <i class="far fa-smile"></i>
+                        <input class="input-message" type="text" name="" value="" placeholder="Scrivi un messaggio">
+                        <i class="fas fa-microphone"></i>
+
 
                     </div>
 
