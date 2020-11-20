@@ -11,6 +11,7 @@ body {
         #009688 15vh,
         #dddbd1 15vh,
         #d2dbdc 100%);
+    font-family: 'Roboto', sans-serif;
 }
 
 .root {
@@ -55,19 +56,102 @@ body {
     height: 100%;
 }
 
+/* LEFT-HEADER-USER */
 .left-header-user {
     height: 70px;
     background-color: #eaeaea;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
+.left-header-user.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.my-username.flex {
+    display: flex;
+    align-items: center;
+}
+
+.my-username img {
+    border-radius: 50%;
+    width: 50px;
+}
+
+.left-header-icons .fas {
+    color: #b1b1b1;
+    margin-right: 12px;
+    font-size: 1.2rem;
+}
+
+/* LEFT-HEADER-NOTIFY */
 .left-header-notify {
     height: 80px;
     background-color: #8edafc;
+    padding-left: 10px;
+    padding-right: 5px;
 }
 
+.left-header-notify.flex {
+    display: flex;
+    align-items: center;
+}
+
+.notify-image.flex {
+    display: flex;
+    align-items: center;
+}
+
+.notify-image .fas {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    margin-right: 10px;
+    color: #8edafc;
+    font-size: 1.2rem;
+    line-height: 50px;
+    text-align: center;
+}
+
+.notify-text a {
+    color: #4f7485;
+}
+
+/* LEFT-SEARCH-BAR */
 .left-search-bar {
     height: 50px;
     background-color: #fafafa;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.left-search-bar.flex {
+    display: flex;
+    align-items: center;
+}
+
+.left-search-bar .search-user {
+    width: 95%;
+    height: 70%;
+    border-radius: 3px;
+    border: 1px solid #f5f5f5;
+    position: relative;
+    padding-left: 60px;
+}
+
+.left-search-bar .search-user::placeholder {
+    color: #e1d9dd;
+    margin-left: 100px;
+}
+
+.left-search-bar .fas {
+    color: #b6b9bb;
+    position: absolute;
+    left: 9%;
+    z-index: 2;
 }
 
 .left-users-list {

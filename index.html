@@ -5,20 +5,37 @@
         <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
         <script src="https://kit.fontawesome.com/4a941afab0.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
         <title>Boolzapp</title>
     </head>
     <body>
         <div class="root flex">
             <div class="main-container debug">
                 <div class="left-container debug">
-                    <div class="left-header-user">
-
+                    <div class="left-header-user flex">
+                        <div class="my-username flex">
+                            <img src="img/avatar_io.jpg" alt="Mio avatar">
+                            <h4>Nome Utente</h4>
+                        </div>
+                        <div class="left-header-icons">
+                            <i class="fas fa-circle-notch"></i>
+                            <i class="fas fa-comment-alt"></i>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
                     </div>
-                    <div class="left-header-notify">
-
+                    <div class="left-header-notify flex">
+                        <div class="notify-image flex">
+                            <i class="fas fa-bell-slash"></i>
+                        </div>
+                        <div class="notify-text">
+                            <h4>Ricevi notifiche di nuovi messaggi</h4>
+                            <h5><a href="#">Attiva notifiche desktop</a></h5>
+                        </div>
                     </div>
-                    <div class="left-search-bar">
-
+                    <div class="left-search-bar flex">
+                        <i class="fas fa-search"></i>
+                        <input type="text" class="search-user" name="" value="" placeholder="Cerca o inizia una nuova chat">
                     </div>
                     <div class="left-users-list">
 
