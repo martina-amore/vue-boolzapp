@@ -231,7 +231,28 @@ body {
 .right-messages-list {
     background-image: url("../img/mine.jpg");
     height: calc(100% - 70px - 70px);
+    overflow-y: scroll;
 }
+
+.right-messages-list.flex{
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* .messages.flex{
+    display: flex;
+} */
+
+.right-messages-list .my-messages {
+    list-style-type: none;
+    padding: 10px;
+    background-color: lightgreen;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+
+
 
 /* RIGHT-INPUT-MESSAGE */
 .right-input-message {

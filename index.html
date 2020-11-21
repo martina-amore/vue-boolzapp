@@ -61,12 +61,14 @@
                             <i class="fas fa-ellipsis-v"></i>
                         </div>
                     </div>
-                    <div class="right-messages-list">
-
+                    <div class="right-messages-list flex">
+                        <ul class="messages flex">
+                            <li class="my-messages" v-for="element in myUsername.messages">{{element}}</li>
+                        </ul>
                     </div>
                     <div class="right-input-message flex">
                         <i class="far fa-smile"></i>
-                        <input class="input-message" type="text" name="" value="" placeholder="Scrivi un messaggio">
+                        <input class="input-message" type="text" name="" value="" v-model="myUsername.userMessage" @keyup.enter="sendMessage(myUsername.userMessage)" placeholder="Scrivi un messaggio">
                         <i class="fas fa-microphone"></i>
 
 
