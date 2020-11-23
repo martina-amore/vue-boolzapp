@@ -87,19 +87,16 @@ const root = new Vue ({
     methods: {
         sendMessage: function(input, index){
             // this.userList[index].messages[0].sent.push(input);
-            // this.myUsername.messages.push(input);
         },
         changeUserActive: function(index){
             this.currentIndex = index;
-            this.userList[index].selected = true;
-            // document.getElementById("prova").classList.add("active");
-            // document.getElementById("prova").nextSibling.classList.remove("active");
-            // this.userList[index].selected = true;
-            for (var i = 0; i < this.userList.length; i++) {
-                if (this.userList[index].selected == false ) {
-                    this.currentIndex = index;
-                }
+        },
+        changeColor: function(){
+            this.userList.forEach((element) => {
+                element.selected = false;
+            });
+            this.userList[this.currentIndex].selected = true;
             }
         }
-    }
+
 })

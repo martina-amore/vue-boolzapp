@@ -39,7 +39,7 @@
                     </div>
                     <div class="left-users-list">
                         <ul class="users-list">
-                            <li id="prova" @click="changeUserActive(index)" v-bind:class="element.selected ? 'active' : null" class="flex" v-for="(element, index) in userList">
+                            <li id="prova" @click="changeUserActive(index); changeColor()" v-bind:class="element.selected ? 'active' : null" class="flex" v-for="(element, index) in userList">
                                 <img :src="element.image" alt="Immagine utente">
                                 <h4>{{element.name}}</h4>
                             </li>
