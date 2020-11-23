@@ -28,7 +28,10 @@ body {
     width: 85vw;
     height: 90vh;
     margin: 0 auto;
-    min-width: 900px;
+}
+
+.main-container.flex {
+    display: flex;
 }
 
 .main-container::after {
@@ -39,7 +42,7 @@ body {
 
 .right-container {
     float: left;
-    width: 60%;
+    width: 70%;
     height: 100%;
 }
 
@@ -55,6 +58,7 @@ body {
     float: left;
     width: 30%;
     height: 100%;
+    min-width: 400px;
 }
 
 /* LEFT-HEADER-USER */
@@ -160,6 +164,7 @@ body {
 .left-users-list {
     background-color: #ffffff;
     height: calc(100% - 70px - 80px - 50px);
+    overflow-y: auto;
 }
 
 .users-list li.flex {
@@ -174,6 +179,10 @@ body {
 }
 
 .left-users-list li:hover{
+    background-color: lightgrey;
+}
+
+.active {
     background-color: #8edafc;
 }
 
@@ -189,6 +198,7 @@ body {
     width: 70%;
     height: 100%;
     border-left: 1px solid #dddbd1;
+    min-width: 350px;
 }
 
 /* RIGHT-HEADER-USER */
@@ -236,23 +246,31 @@ body {
 
 .right-messages-list.flex{
     display: flex;
-    justify-content: flex-end;
 }
 
-/* .messages.flex{
+.messages.flex{
     display: flex;
-} */
+    flex-direction: column;
+}
 
-.right-messages-list .my-messages {
+.right-messages-list .sent-messages {
+    width: 300px;
+    list-style-type: none;
+    padding: 10px;
+    background-color: lightyellow;
+    border-radius: 5px;
+    margin: 10px;
+    align-self: flex-end;
+}
+
+.right-messages-list .received-messages {
+    width: 300px;
     list-style-type: none;
     padding: 10px;
     background-color: lightgreen;
     border-radius: 5px;
     margin: 10px;
 }
-
-
-
 
 /* RIGHT-INPUT-MESSAGE */
 .right-input-message {

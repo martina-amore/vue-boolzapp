@@ -11,7 +11,7 @@
     </head>
     <body>
         <div class="root flex">
-            <div class="main-container debug">
+            <div class="main-container flex debug">
                 <div class="left-container debug">
                     <div class="left-header-user flex">
                         <div class="my-username flex">
@@ -39,7 +39,7 @@
                     </div>
                     <div class="left-users-list">
                         <ul class="users-list">
-                            <li class="flex" v-for="element in userList">
+                            <li id="prova" @click="changeUserActive(index)" v-bind:class="element.selected ? 'active' : null" class="flex" v-for="(element, index) in userList">
                                 <img :src="element.image" alt="Immagine utente">
                                 <h4>{{element.name}}</h4>
                             </li>
@@ -49,10 +49,10 @@
                 <div class="right-container debug flex">
                     <div class="right-header-user flex">
                         <div class="username flex">
-                            <img :src="userList[0].image" alt="Immagine del profilo">
+                            <img :src="userList[currentIndex].image" alt="Immagine del profilo">
                             <div class="name-last-access">
-                                <h4>{{userList[0].name}}</h4>
-                                <h5>{{userList[0].lastAccess}}</h5>
+                                <h4>{{userList[currentIndex].name}}</h4>
+                                <h5>{{userList[currentIndex].lastAccess}}</h5>
                             </div>
                         </div>
                         <div class="right-header-icons">
@@ -61,19 +61,17 @@
                             <i class="fas fa-ellipsis-v"></i>
                         </div>
                     </div>
-                    <div class="right-messages-list flex">
+                    <div class="right-messages-list">
                         <ul class="messages flex">
-                            <li class="my-messages" v-for="element in myUsername.messages">{{element}}</li>
+                            <li class="sent-messages" v-for="(element, index) in userList[currentIndex].messages[0].sent">{{element}}</li>
+                            <li class="received-messages" v-for="(element, index) in userList[currentIndex].messages[0].received">{{element}}</li>
                         </ul>
                     </div>
                     <div class="right-input-message flex">
                         <i class="far fa-smile"></i>
-                        <input class="input-message" type="text" name="" value="" v-model="myUsername.userMessage" @keyup.enter="sendMessage(myUsername.userMessage)" placeholder="Scrivi un messaggio">
+                        <input class="input-message" type="text" name="" value="" v-model="myUsername.userMessage" @keyup.enter="sendMessage(myUsername.userMessage, currentIndex)" placeholder="Scrivi un messaggio">
                         <i class="fas fa-microphone"></i>
-
-
                     </div>
-
                 </div>
             </div>
         </div>
