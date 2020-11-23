@@ -179,11 +179,11 @@ body {
 }
 
 .left-users-list li:hover{
-    background-color: lightgrey;
+    background-color: #f5f5f5;
 }
 
 .active {
-    background-color: #8edafc;
+    background-color: lightgrey;
 }
 
 .left-users-list img {
@@ -256,20 +256,25 @@ body {
 .right-messages-list .sent-messages {
     width: 300px;
     list-style-type: none;
-    padding: 10px;
+    padding: 10px 5px 5px 10px;
     background-color: lightyellow;
     border-radius: 5px;
     margin: 10px;
-    align-self: flex-end;
+}
+
+.right-messages-list .date {
+    color: gray;
+    text-align: right;
 }
 
 .right-messages-list .received-messages {
     width: 300px;
     list-style-type: none;
-    padding: 10px;
+    padding: 10px 5px 5px 10px;
     background-color: lightgreen;
     border-radius: 5px;
     margin: 10px;
+    align-self: flex-end;
 }
 
 /* RIGHT-INPUT-MESSAGE */

@@ -35,9 +35,9 @@ const root = new Vue ({
             lastAccess: "Ultimo accesso oggi alle",
             messages: [
             {
-                sent: ["prova inviato Michele", "altra prova inviato"],
+                sent: ['prova inviato Michele'],
                 received: ["prova ricevuto Michele", "altra prova ricevuto"],
-                date: ""
+                date: "23/11/2020 15:12"
             }
         ],
             selected: true
@@ -50,7 +50,7 @@ const root = new Vue ({
                 {
                 sent: ["prova inviato Fabio"],
                 received: ["prova ricevuto Fabio"],
-                date: ""
+                date: "23/11/2020 15:12"
                 }
         ],
             selected: false
@@ -63,7 +63,7 @@ const root = new Vue ({
                 {
                 sent: ["prova inviato Samuele"],
                 received: ["prova ricevuto Samuele"],
-                date: ""
+                date: "23/11/2020 15:12"
                 }
         ],
             selected: false
@@ -74,9 +74,9 @@ const root = new Vue ({
             lastAccess: "Ultimo accesso oggi alle",
             messages: [
                 {
-                sent: ["prova inviato Alessio"],
-                received: ["prova ricevuto Alessio"],
-                date: ""
+                    sent: ["prova inviato Alessio"],
+                    received: ["prova ricevuto Alessio"],
+                    date: "23/11/2020 15:12"
                 }
         ],
             selected: false

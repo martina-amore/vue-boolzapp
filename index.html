@@ -63,8 +63,14 @@
                     </div>
                     <div class="right-messages-list">
                         <ul class="messages flex">
-                            <li class="sent-messages" v-for="(element, index) in userList[currentIndex].messages[0].sent">{{element}}</li>
-                            <li class="received-messages" v-for="(element, index) in userList[currentIndex].messages[0].received">{{element}}</li>
+                            <li class="sent-messages" v-for="(element, index) in userList[currentIndex].messages">
+                                <span>{{element.sent[0]}}</span>
+                                <h5 class="date">{{element.date}}</h5>
+                            </li>
+                            <li class="received-messages" v-for="(element, index) in userList[currentIndex].messages">
+                                <span>{{element.received[0]}}</span>
+                                <h5 class="date">{{element.date}}</h5>
+                            </li>
                         </ul>
                     </div>
                     <div class="right-input-message flex">
