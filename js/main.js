@@ -1,24 +1,5 @@
-// arrayImg = [
-//     "img/avatar_1.jpg",
-//     "img/avatar_2.jpg",
-//     "img/avatar_3.jpg",
-//     "img/avatar_4.jpg",
-//     "img/avatar_5.jpg",
-//     "img/avatar_6.jpg",
-//     "img/avatar_7.jpg",
-//     "img/avatar_8.jpg"
-// ];
-//
-// arrayNames = [
-//     "Michele",
-//     "Fabio",
-//     "Samuele",
-//     "Alessio",
-//     "Antonio",
-//     "Luisa",
-//     "Carlo",
-//     "Fabrizio"
-// ];
+const SENT_STATUS = "sent";
+const RECEIVED_STATUS = "received";
 
 const root = new Vue ({
     el: ".root",
@@ -35,9 +16,19 @@ const root = new Vue ({
             lastAccess: "Ultimo accesso oggi alle",
             messages: [
             {
-                sent: ['prova inviato Michele'],
-                received: ["prova ricevuto Michele", "altra prova ricevuto"],
-                date: "23/11/2020 15:12"
+                text: "prova inviato Michele",
+                date: "23/11/2020 15:12",
+                type: SENT_STATUS
+            },
+            {
+                text: "prova ricevuto Michele",
+                date: "23/11/2020 15:12",
+                type: RECEIVED_STATUS
+            },
+            {
+                text: "prova ricevuto Michele",
+                date: "23/11/2020 15:12",
+                type: RECEIVED_STATUS
             }
         ],
             selected: true
@@ -47,11 +38,21 @@ const root = new Vue ({
             name: "Fabio",
             lastAccess: "Ultimo accesso oggi alle",
             messages: [
-                {
-                sent: ["prova inviato Fabio"],
-                received: ["prova ricevuto Fabio"],
-                date: "23/11/2020 15:12"
-                }
+            {
+                text: "prova inviato Fabio",
+                date: "23/11/2020 15:12",
+                type: SENT_STATUS
+            },
+            {
+                text: "prova inviato Fabio",
+                date: "23/11/2020 15:12",
+                type: SENT_STATUS
+            },
+            {
+                text: "prova ricevuto Fabio",
+                date: "23/11/2020 15:12",
+                type: RECEIVED_STATUS
+            },
         ],
             selected: false
         },
@@ -61,10 +62,20 @@ const root = new Vue ({
             lastAccess: "Ultimo accesso oggi alle",
             messages: [
                 {
-                sent: ["prova inviato Samuele"],
-                received: ["prova ricevuto Samuele"],
-                date: "23/11/2020 15:12"
-                }
+                    text: "prova ricevuto Samuele",
+                    date: "23/11/2020 15:12",
+                    type: RECEIVED_STATUS
+                },
+                {
+                    text: "prova inviato Samuele",
+                    date: "23/11/2020 15:12",
+                    type: SENT_STATUS
+                },
+                {
+                    text: "prova inviato Samuele",
+                    date: "23/11/2020 15:12",
+                    type: RECEIVED_STATUS
+                },
         ],
             selected: false
         },
@@ -74,10 +85,20 @@ const root = new Vue ({
             lastAccess: "Ultimo accesso oggi alle",
             messages: [
                 {
-                    sent: ["prova inviato Alessio"],
-                    received: ["prova ricevuto Alessio"],
-                    date: "23/11/2020 15:12"
-                }
+                    text: "prova inviato Alessio",
+                    date: "23/11/2020 15:12",
+                    type: SENT_STATUS
+                },
+                {
+                    text: "prova inviato Alessio",
+                    date: "23/11/2020 15:12",
+                    type: SENT_STATUS
+                },
+                {
+                    text: "prova ricevuto Alessio",
+                    date: "23/11/2020 15:12",
+                    type: RECEIVED_STATUS
+                },
         ],
             selected: false
         }

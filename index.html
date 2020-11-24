@@ -39,7 +39,7 @@
                     </div>
                     <div class="left-users-list">
                         <ul class="users-list">
-                            <li id="prova" @click="changeUserActive(index); changeColor()" v-bind:class="element.selected ? 'active' : null" class="flex" v-for="(element, index) in userList">
+                            <li @click="changeUserActive(index); changeColor()" v-bind:class="element.selected ? 'active' : null" class="flex" v-for="(element, index) in userList">
                                 <img :src="element.image" alt="Immagine utente">
                                 <h4>{{element.name}}</h4>
                             </li>
@@ -63,14 +63,14 @@
                     </div>
                     <div class="right-messages-list">
                         <ul class="messages flex">
-                            <li class="sent-messages" v-for="(element, index) in userList[currentIndex].messages">
-                                <span>{{element.sent[0]}}</span>
+                            <li class="message" :class="{sent: userList[currentIndex].messages[index].type === 'sent', received: userList[currentIndex].messages[index].type === 'received'}" v-for="(element, index) in userList[currentIndex].messages">
+                                <span>{{element.text}}</span>
                                 <h5 class="date">{{element.date}}</h5>
                             </li>
-                            <li class="received-messages" v-for="(element, index) in userList[currentIndex].messages">
-                                <span>{{element.received[0]}}</span>
+                            <!-- <li class="received-messages" v-for="(element, index) in userList[currentIndex].messages">
+                                <span>{{element}}</span>
                                 <h5 class="date">{{element.date}}</h5>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                     <div class="right-input-message flex">

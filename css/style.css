@@ -253,18 +253,13 @@ body {
     flex-direction: column;
 }
 
-.right-messages-list .sent-messages {
+/* .right-messages-list .sent-messages {
     width: 300px;
     list-style-type: none;
     padding: 10px 5px 5px 10px;
     background-color: lightyellow;
     border-radius: 5px;
     margin: 10px;
-}
-
-.right-messages-list .date {
-    color: gray;
-    text-align: right;
 }
 
 .right-messages-list .received-messages {
@@ -275,6 +270,30 @@ body {
     border-radius: 5px;
     margin: 10px;
     align-self: flex-end;
+} */
+
+.sent {
+    width: 300px;
+    list-style-type: none;
+    padding: 10px 5px 5px 10px;
+    background-color: lightyellow;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.received {
+    width: 300px;
+    list-style-type: none;
+    padding: 10px 5px 5px 10px;
+    background-color: lightgreen;
+    border-radius: 5px;
+    margin: 10px;
+    align-self: flex-end;
+}
+
+.right-messages-list .date {
+    color: gray;
+    text-align: right;
 }
 
 /* RIGHT-INPUT-MESSAGE */
