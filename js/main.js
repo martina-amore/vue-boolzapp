@@ -108,10 +108,13 @@ const root = new Vue ({
         currentIndex: 0,
     },
     methods: {
-        sendMessage: function(text, index, date, type){
+        sendMessage: function(index){
             this.userList[index].messages.push(
-                {text, date, type}
+                {text: this.myUsername.userMessage,
+                 date: "22.22 11-11-2021",
+                 type: "sent"}
             );
+            this.autoAnswer(index);
         },
         changeUserActive: function(index){
             this.currentIndex = index;
@@ -121,7 +124,15 @@ const root = new Vue ({
                 element.selected = false;
             });
             this.userList[this.currentIndex].selected = true;
-            }
+        },
+        autoAnswer: function(index) {
+            setTimeout(
+                () => {
+                this.userList[index].messages.push(
+                    {text: "prova risposta automatica",
+                     date: "22.24 11-11-2021",
+                     type: "received"});
+            }, 3000);
         }
-
+    }
 })
