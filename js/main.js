@@ -1,5 +1,6 @@
 const SENT_STATUS = "sent";
 const RECEIVED_STATUS = "received";
+const DATE = new Date(2020);
 
 const root = new Vue ({
     el: ".root",
@@ -7,7 +8,8 @@ const root = new Vue ({
         myUsername: {
             image: "img/avatar_io.jpg",
             name: "Nome Utente",
-            userMessage:""
+            userMessage:"",
+            date: "prova data"
         },
         userList: [
         {
@@ -106,8 +108,10 @@ const root = new Vue ({
         currentIndex: 0,
     },
     methods: {
-        sendMessage: function(input, index){
-            // this.userList[index].messages[0].sent.push(input);
+        sendMessage: function(text, index, date, type){
+            this.userList[index].messages.push(
+                {text, date, type}
+            );
         },
         changeUserActive: function(index){
             this.currentIndex = index;
