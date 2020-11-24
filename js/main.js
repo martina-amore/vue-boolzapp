@@ -1,6 +1,6 @@
 const SENT_STATUS = "sent";
 const RECEIVED_STATUS = "received";
-const DATE = new Date(2020);
+const DATE = new Date();
 
 const root = new Vue ({
     el: ".root",
@@ -19,17 +19,17 @@ const root = new Vue ({
             messages: [
             {
                 text: "prova inviato Michele",
-                date: "23/11/2020 15:12",
+                date: "23/11/2020 15:12:35",
                 type: SENT_STATUS
             },
             {
                 text: "prova ricevuto Michele",
-                date: "23/11/2020 15:12",
+                date: "23/11/2020 15:12:37",
                 type: RECEIVED_STATUS
             },
             {
                 text: "prova ricevuto Michele",
-                date: "23/11/2020 15:12",
+                date: "23/11/2020 15:12:49",
                 type: RECEIVED_STATUS
             }
         ],
@@ -42,17 +42,17 @@ const root = new Vue ({
             messages: [
             {
                 text: "prova inviato Fabio",
-                date: "23/11/2020 15:12",
+                date: "23/11/2020 15:12:35",
                 type: SENT_STATUS
             },
             {
                 text: "prova inviato Fabio",
-                date: "23/11/2020 15:12",
+                date: "23/11/2020 15:12:37",
                 type: SENT_STATUS
             },
             {
                 text: "prova ricevuto Fabio",
-                date: "23/11/2020 15:12",
+                date: "23/11/2020 15:12:49",
                 type: RECEIVED_STATUS
             },
         ],
@@ -65,17 +65,17 @@ const root = new Vue ({
             messages: [
                 {
                     text: "prova ricevuto Samuele",
-                    date: "23/11/2020 15:12",
+                    date: "23/11/2020 15:12:35",
                     type: RECEIVED_STATUS
                 },
                 {
                     text: "prova inviato Samuele",
-                    date: "23/11/2020 15:12",
+                    date: "23/11/2020 15:12:37",
                     type: SENT_STATUS
                 },
                 {
                     text: "prova inviato Samuele",
-                    date: "23/11/2020 15:12",
+                    date: "23/11/2020 15:12:49",
                     type: RECEIVED_STATUS
                 },
         ],
@@ -88,17 +88,17 @@ const root = new Vue ({
             messages: [
                 {
                     text: "prova inviato Alessio",
-                    date: "23/11/2020 15:12",
+                    date: "23/11/2020 15:12:35",
                     type: SENT_STATUS
                 },
                 {
                     text: "prova inviato Alessio",
-                    date: "23/11/2020 15:12",
+                    date: "23/11/2020 15:12:37",
                     type: SENT_STATUS
                 },
                 {
                     text: "prova ricevuto Alessio",
-                    date: "23/11/2020 15:12",
+                    date: "23/11/2020 15:12:49",
                     type: RECEIVED_STATUS
                 },
         ],
@@ -111,7 +111,7 @@ const root = new Vue ({
         sendMessage: function(index){
             this.userList[index].messages.push(
                 {text: this.myUsername.userMessage,
-                 date: "22.22 11-11-2021",
+                 date: this.getCurrentDate(),
                  type: "sent"}
             );
             this.autoAnswer(index);
@@ -128,11 +128,22 @@ const root = new Vue ({
         autoAnswer: function(index) {
             setTimeout(
                 () => {
+                let myTime = this.getCurrentDate()
                 this.userList[index].messages.push(
                     {text: "prova risposta automatica",
-                     date: "22.24 11-11-2021",
+                     date: this.getCurrentDate(),
                      type: "received"});
             }, 3000);
+        },
+        getCurrentDate: function() {
+            let month = DATE.getUTCMonth() + 1;
+            let day = DATE.getUTCDate();
+            let year = DATE.getUTCFullYear();
+            let hours = DATE.getHours();
+            let minutes = DATE.getMinutes();
+            let seconds = DATE.getSeconds();
+            let newdate = `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
+            return newdate;
         }
     }
 })
