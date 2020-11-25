@@ -35,11 +35,11 @@
                     </div>
                     <div class="left-search-bar flex">
                         <i class="fas fa-search"></i>
-                        <input type="text" class="search-user" name="" value="" placeholder="Cerca o inizia una nuova chat">
+                        <input type="text" @keyup="filterUser()" v-model="searchUser" class="search-user" name="" value="" placeholder="Cerca o inizia una nuova chat">
                     </div>
                     <div class="left-users-list">
                         <ul class="users-list">
-                            <li @click="changeUserActive(index); changeColor()" v-bind:class="element.selected ? 'active' : null" class="flex" v-for="(element, index) in userList">
+                            <li @click="changeUserActive(index); changeColor()" v-bind:class="[element.selected ? 'active' : null, element.researched ? 'display-block' : 'display-none']" v-for="(element, index) in userList">
                                 <img :src="element.image" alt="Immagine utente">
                                 <h4>{{element.name}}</h4>
                             </li>
@@ -67,10 +67,6 @@
                                 <span>{{element.text}}</span>
                                 <h5 class="date">{{element.date}}</h5>
                             </li>
-                            <!-- <li class="received-messages" v-for="(element, index) in userList[currentIndex].messages">
-                                <span>{{element}}</span>
-                                <h5 class="date">{{element.date}}</h5>
-                            </li> -->
                         </ul>
                     </div>
                     <div class="right-input-message flex">

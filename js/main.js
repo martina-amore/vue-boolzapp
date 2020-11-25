@@ -33,7 +33,8 @@ const root = new Vue ({
                 type: RECEIVED_STATUS
             }
         ],
-            selected: true
+            selected: true,
+            researched: true
         },
         {
             image: "img/avatar_2.jpg",
@@ -56,7 +57,8 @@ const root = new Vue ({
                 type: RECEIVED_STATUS
             },
         ],
-            selected: false
+            selected: false,
+            researched: true
         },
         {
             image: "img/avatar_3.jpg",
@@ -79,7 +81,8 @@ const root = new Vue ({
                     type: RECEIVED_STATUS
                 },
         ],
-            selected: false
+            selected: false,
+            researched: true
         },
         {
             image: "img/avatar_4.jpg",
@@ -102,10 +105,12 @@ const root = new Vue ({
                     type: RECEIVED_STATUS
                 },
         ],
-            selected: false
+            selected: false,
+            researched: true
         }
     ],
         currentIndex: 0,
+        searchUser: "",
     },
     methods: {
         sendMessage: function(index){
@@ -144,6 +149,18 @@ const root = new Vue ({
             let seconds = DATE.getSeconds();
             let newdate = `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
             return newdate;
+        },
+        filterUser: function () {
+            let a = this;
+            this.userList.forEach(function (element) {
+                if (!element.name.toLowerCase().includes(a.searchUser.toLowerCase())) {
+                    element.researched = false;
+                }
+                else {
+                    element.researched = true;
+                }
+            }
+        );
         }
     }
 })
