@@ -7,7 +7,7 @@ const root = new Vue ({
     data: {
         myUsername: {
             image: "img/avatar_io.jpg",
-            name: "Nome Utente",
+            name: "Martina",
             userMessage:"",
             date: "prova data"
         },

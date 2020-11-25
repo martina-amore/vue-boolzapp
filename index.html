@@ -11,8 +11,8 @@
     </head>
     <body>
         <div class="root flex">
-            <div class="main-container flex debug">
-                <div class="left-container debug">
+            <div class="main-container flex">
+                <div class="left-container">
                     <div class="left-header-user flex">
                         <div class="my-username flex">
                             <img :src="myUsername.image" alt="Mio avatar">
@@ -40,8 +40,10 @@
                     <div class="left-users-list">
                         <ul class="users-list">
                             <li @click="changeUserActive(index); changeColor()" v-bind:class="[element.selected ? 'active' : null, element.researched ? 'display-block' : 'display-none']" v-for="(element, index) in userList">
-                                <img :src="element.image" alt="Immagine utente">
-                                <h4>{{element.name}}</h4>
+                                <a class="flex" href="#">
+                                    <img :src="element.image" alt="Immagine utente">
+                                    <span>{{element.name}}</span>
+                                </a>
                             </li>
                         </ul>
                     </div>
