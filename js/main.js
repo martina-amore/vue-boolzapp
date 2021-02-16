@@ -18,17 +18,17 @@ const root = new Vue ({
             lastAccess: "Ultimo accesso oggi alle",
             messages: [
             {
-                text: "prova inviato Michele",
+                text: "Puoi prendere il pane?",
                 date: "23/11/2020 15:12:35",
                 type: SENT_STATUS
             },
             {
-                text: "prova ricevuto Michele",
+                text: "Certo",
                 date: "23/11/2020 15:12:37",
                 type: RECEIVED_STATUS
             },
             {
-                text: "prova ricevuto Michele",
+                text: "Quanto ne serve?",
                 date: "23/11/2020 15:12:49",
                 type: RECEIVED_STATUS
             }
