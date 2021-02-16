@@ -10,4 +10,4 @@
   <li>Risposta automatica</li>
   <li>Gestione della data in tempo reale</li>
 </ul>
-![](boolzap.jpg)
+![](boolzapp.png)
